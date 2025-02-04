@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>A Survey on 3D Gaussian Splatting - ImportantArticles</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The note of Important Articles">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/pagetoc.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="ReadPapers.html"><strong aria-hidden="true">2.</strong> 如何高效读论文</a></li><li class="chapter-item expanded affix "><li class="part-title">CVPR Tutorial - Denoising Diffusion Models: A Generative Learning Big Bang</li><li class="chapter-item expanded "><a href="diffusion-tutorial-part/Introduction.html"><strong aria-hidden="true">3.</strong> Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Fundamentals</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="diffusion-tutorial-part/Fundamentals/DenoisingDiffusionProbabilisticModels.html"><strong aria-hidden="true">4.1.</strong> Denoising Diffusion Probabilistic Models</a></li><li class="chapter-item expanded "><a href="diffusion-tutorial-part/Fundamentals/Score-basedGenerativeModelingwithDifferentialEquations.html"><strong aria-hidden="true">4.2.</strong> Score-based Generative Modeling with Differential Equations</a></li><li class="chapter-item expanded "><a href="diffusion-tutorial-part/Fundamentals/AcceleratedSampling.html"><strong aria-hidden="true">4.3.</strong> Accelerated Sampling</a></li><li class="chapter-item expanded "><a href="diffusion-tutorial-part/Fundamentals/ConditionalGenerationandGuidance.html"><strong aria-hidden="true">4.4.</strong> Conditional Generation and Guidance</a></li><li class="chapter-item expanded "><a href="diffusion-tutorial-part/Fundamentals/Summary.html"><strong aria-hidden="true">4.5.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="diffusion-tutorial-part/Architecture.html"><strong aria-hidden="true">5.</strong> T2I 基模型</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Image Applications Based on 基模型</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="diffusion-tutorial-part/ApplicationOnImage/ImageEditing.html"><strong aria-hidden="true">6.1.</strong> 图像编辑</a></li><li class="chapter-item expanded "><a href="diffusion-tutorial-part/Applicationsonotherdomains/InverseProblems.html"><strong aria-hidden="true">6.2.</strong> 图像去噪/图像超分/图像补全</a></li><li class="chapter-item expanded "><a href="diffusion-tutorial-part/ApplicationOnImage/LargeContents.html"><strong aria-hidden="true">6.3.</strong> 大图生成</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 3D Applications Based on Diffusion</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="diffusion-tutorial-part/ApplicationsOn3D/3D.html"><strong aria-hidden="true">7.1.</strong> 3D表示</a></li><li class="chapter-item expanded "><a href="diffusion-tutorial-part/ApplicationsOn3D/2Ddiffusionmodelsfor3Dgeneration.html"><strong aria-hidden="true">7.2.</strong> 3D生成</a></li><li class="chapter-item expanded "><a href="diffusion-tutorial-part/ApplicationsOn3D/Diffusionmodelsforviewsynthesis.html"><strong aria-hidden="true">7.3.</strong> 新视角合成</a></li><li class="chapter-item expanded "><a href="diffusion-tutorial-part/ApplicationsOn3D/3Dreconstruction.html"><strong aria-hidden="true">7.4.</strong> 3D重建</a></li><li class="chapter-item expanded "><a href="diffusion-tutorial-part/ApplicationsOn3D/Inverseproblems.html"><strong aria-hidden="true">7.5.</strong> 3D编辑</a></li></ol></li><li class="chapter-item expanded "><a href="diffusion-tutorial-part/ApplicationsOn3D/Safetyandlimitationsofdiffusionmodels.html"><strong aria-hidden="true">8.</strong> Safety and limitations of diffusion models</a></li><li class="chapter-item expanded affix "><li class="part-title">Video Diffusion Models</li><li class="chapter-item expanded "><a href="VideoDiffusionModels/Introduction.html"><strong aria-hidden="true">9.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="VideoDiffusionModels/VideoGeneration/VideoGeneration.html"><strong aria-hidden="true">10.</strong> Video Generation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="VideoDiffusionModels/VideoGeneration/Pioneeringearlyworks.html"><strong aria-hidden="true">10.1.</strong> 闭源T2V大模型</a></li><li class="chapter-item expanded "><a href="VideoDiffusionModels/VideoGeneration/Open-sourcebasemodels.html"><strong aria-hidden="true">10.2.</strong> 开源T2V基模型</a></li><li class="chapter-item expanded "><a href="VideoDiffusionModels/VideoGeneration/WorksBasedOnT2I.html"><strong aria-hidden="true">10.3.</strong> Works Based on T2I 基模型</a></li><li class="chapter-item expanded "><a href="VideoDiffusionModels/VideoGeneration/WorksBasedOnT2V.html"><strong aria-hidden="true">10.4.</strong> Works Based on T2V 基模型</a></li><li class="chapter-item expanded "><a href="VideoDiffusionModels/VideoGeneration/Storyboard.html"><strong aria-hidden="true">10.5.</strong> Storyboard</a></li><li class="chapter-item expanded "><a href="VideoDiffusionModels/VideoGeneration/Longvideogeneration.html"><strong aria-hidden="true">10.6.</strong> Long video generation</a></li><li class="chapter-item expanded "><a href="VideoDiffusionModels/VideoGeneration/Multimodal-guidedgeneration.html"><strong aria-hidden="true">10.7.</strong> Multimodal-guided generation</a></li></ol></li><li class="chapter-item expanded "><a href="VideoDiffusionModels/VideoEditing.html"><strong aria-hidden="true">11.</strong> Video Editing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="VideoDiffusionModels/VideoEditing/Tuning-based.html"><strong aria-hidden="true">11.1.</strong> Tuning-based</a></li><li class="chapter-item expanded "><a href="VideoDiffusionModels/VideoEditing/Training-free.html"><strong aria-hidden="true">11.2.</strong> Training-free</a></li><li class="chapter-item expanded "><a href="VideoDiffusionModels/VideoEditing/ControlledEdifng.html"><strong aria-hidden="true">11.3.</strong> Controlled Edifng</a></li><li class="chapter-item expanded "><a href="VideoDiffusionModels/VideoEditing/3D-Aware.html"><strong aria-hidden="true">11.4.</strong> 3D-Aware</a></li><li class="chapter-item expanded "><a href="VideoDiffusionModels/VideoEditing/OtherGuidance.html"><strong aria-hidden="true">11.5.</strong> Other Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="VideoDiffusionModels/EvaluationMetrics.html"><strong aria-hidden="true">12.</strong> 评价指标</a></li><li class="chapter-item expanded affix "><li class="part-title">Others</li><li class="chapter-item expanded "><a href="LargeMultimodalModelsNotesonCVPR2023Tutorial.html"><strong aria-hidden="true">13.</strong> Large Multimodal Models Notes on CVPR 2023 Tutorial</a></li><li class="chapter-item expanded "><a href="HPE_HMR_Summary.html"><strong aria-hidden="true">14.</strong> Deep Learning for 3D Human Pose Estimation and Mesh Recovery: A Survey</a></li><li class="chapter-item expanded "><a href="3D_Gaussian_Splatting.html" class="active"><strong aria-hidden="true">15.</strong> A Survey on 3D Gaussian Splatting</a></li><li class="chapter-item expanded "><a href="HumanMotionGenerationSummary.html"><strong aria-hidden="true">16.</strong> Human Motion Generation: A Survey</a></li><li class="chapter-item expanded "><a href="HumanVideoGeneration.html"><strong aria-hidden="true">17.</strong> Human Video Generation</a></li><li class="chapter-item expanded "><a href="数据集.html"><strong aria-hidden="true">18.</strong> 数据集</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ImportantArticles</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/CaterpillarStudyGroup/ImportantArticles" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <p><img src="./assets/7b6ce0e0b104d36e8331f86fd4c9ab5a_1_Figure_2_1330436394.png" alt="" /></p>
+<h1 id="introduction"><a class="header" href="#introduction">INTRODUCTION</a></h1>
+<p>需求：基于图像的3D场景重建</p>
+<p>发展史：</p>
+<table><thead><tr><th></th><th></th><th></th></tr></thead><tbody>
+<tr><td>光场和基本场景和重建</td><td>1-3</td><td>受到对密集采样和结构化捕捉的依赖的限制，导致在处理复杂场景和照明条件方面面临重大挑战</td></tr>
+<tr><td>structure-frommotion [4]， multi-view stereo [5] algorithms</td><td>4， 5</td><td>难以进行新视角合成，并且缺乏与深度场景理解模型的兼容性</td></tr>
+<tr><td>NeRF：实现空间坐标到颜色和密度的直接映射</td><td>6-11，</td><td>NeRF 的成功取决于其创建连续的体积场景函数的能力，产生具有前所未有的细节和真实感的结果。<br>1. 计算强度。基于 NeRF 的方法是计算密集型的 [6]-[11]，通常需要大量的训练时间和大量的渲染资源，特别是对于高分辨率输出。 <br>2. 可编辑性。操纵隐式表示的场景可能具有挑战性，因为对神经网络权重的直接修改与场景的几何或外观属性的变化并不直观相关。</td></tr>
+<tr><td>3D Gaussian splatting (GS) [12]</td><td>12</td><td>引入先进的、明确的场景表示，使用空间中数百万个可学习的 3D 高斯模型对场景进行建模。<br>采用显式表示和高度并行化的工作流程，促进更高效的计算和渲染</td></tr>
+</tbody></table>
+<table><thead><tr><th>ID</th><th>Year</th><th>Name</th><th>Note</th><th>Tags</th><th>Link</th></tr></thead><tbody>
+<tr><td>12</td><td>2023</td><td>3D Gaussian Splatting for Real-Time Radiance Field Rendering</td><td></td><td></td><td><a href="https://caterpillarstudygroup.github.io/ReadPapers/17.html">link</a></td></tr>
+</tbody></table>
+<h1 id="background"><a class="header" href="#background">BACKGROUND</a></h1>
+<h2 id="problem-formulation"><a class="header" href="#problem-formulation">Problem Formulation</a></h2>
+<h3 id="radiance-field"><a class="header" href="#radiance-field">Radiance Field</a></h3>
+<p><a href="https://caterpillarstudygroup.github.io/GAMES101_mdbook/Color/LightField.html">GAMES101课程关于光场的介绍</a></p>
+<p>光场是三维空间中光分布的表示，它捕获光如何与环境中的表面和材料相互作用[30]。在数学上，光场可以描述为函数</p>
+<p>$$
+L : (x, y, z, θ, φ) \in R^5 → R^+
+$$</p>
+<p>其中(x, y, z)为映射空间中的一个点，(θ, φ)为球坐标指定的方向。<br />
+radiance value为非值。<br />
+L可以通过隐式或显式表示来封装，每种表示对于场景表示和渲染都有特定的优势。</p>
+<h3 id="implicit-radiance-field"><a class="header" href="#implicit-radiance-field">Implicit Radiance Field</a></h3>
+<p>隐式辐射场表示场景中的光分布，而无需显式定义场景的几何形状。</p>
+<p>L经常使用神经网络来学习连续的体积场景表示[35]，[36]。最突出的例子是 NeRF [15]。</p>
+<p>在 NeRF 中，神经网络（通常是MLP）将一组空间坐标 (x, y, z) 和观察方向 (θ, φ) 映射到颜色和密度值。任何点的辐射度都不会显式存储，而是通过查询 MLP 即时计算。因此，该函数可以写为：</p>
+<p>$$
+L = MLP(x, y, z, θ, φ)
+$$</p>
+<p>Good：这种格式允许对复杂场景进行可微分和紧凑的表示<br />
+Bad：然而由于volumetric ray marching [12]，渲染的计算负载高。</p>
+<h3 id="explicit-radiance-field"><a class="header" href="#explicit-radiance-field">Explicit Radiance Field</a></h3>
+<p>显式辐射场直接表示离散空间结构中的光分布，例如体素、网格、点云。<strong>该结构中的每个元素存储其各自空间位置的辐射信息</strong>。</p>
+<p>显式辐射场表示的通用形式可以写为：</p>
+<p>$$
+L = \text {DataStructure}[(x,y,z)] \cdot f(θ, φ)
+$$</p>
+<p>Good：这种方法允许更直接且通常更快地访问radiance value。<br />
+Bad：代价是更高的内存使用量和可能更低的分辨率。</p>
+<h3 id="3d-gaussian-splatting-两全其美"><a class="header" href="#3d-gaussian-splatting-两全其美">3D Gaussian Splatting: 两全其美</a></h3>
+<p>3D GS [12]是显式辐射场，又具有隐式辐射场的优点。因为它结合了基于神经网络的优化和显式结构化数据存储的优点。因此可以实时、高质量渲染，并且需要更少的训练时间，特别是对于复杂场景和高分辨率输出。 3D 高斯表示形式为：</p>
+<p>$$
+L = \sum_i G(x,y,z,\mu_i, \sigma_i)\cdot c_i(θ, φ)
+$$</p>
+<blockquote>
+<p>显式的方法，只能把radiance绑定在点上，因此受限于点的分辨率，而点的分辨率又受限于内存。<br />
+3D GS把radiance绑定在有体积的点（球）上，所以对点的分辨率要求低一点。球的作用有点像点之间的插值。</p>
+</blockquote>
+<h2 id="背景和术语"><a class="header" href="#背景和术语">背景和术语</a></h2>
+<h3 id="场景重建与渲染"><a class="header" href="#场景重建与渲染">场景重建与渲染</a></h3>
+<p>3D重建：图像-&gt;3D模型<br />
+渲染：3D模型-&gt;图像</p>
+<h3 id="神经渲染和辐射场"><a class="header" href="#神经渲染和辐射场">神经渲染和辐射场</a></h3>
+<h3 id="体积表示和ray-marching"><a class="header" href="#体积表示和ray-marching">体积表示和ray marching</a></h3>
+<p>体积表示不仅将对象和场景建模为表面，而且将其建模为充满材料或空白空间的体积[46]。这种方法可以更准确地渲染雾、烟或半透明材料等现象。<br />
+光线行进是一种与体积表示一起使用的技术，通过增量跟踪穿过体积的光路来渲染图像[13]、[14]。 </p>
+<p><a href="https://caterpillarstudygroup.github.io/GAMES101_mdbook/AdvancedRendering/AdcancedAppearcing.html">非表面模型的渲染</a></p>
+<p>NeRF [15] 与体积射线行进有着相同的精神，并引入了重要性采样和位置编码来提高合成图像的质量。因此高质量的结果，高计算成本。</p>
+<h3 id="基于点的渲染"><a class="header" href="#基于点的渲染">基于点的渲染</a></h3>
+<p>基于点的渲染是一种使用点而不是传统多边形来可视化 3D 场景的技术。可以通过可学习神经网络等附加属性来增强点描述符[47]、[48]，并有效渲染[49]、[50]。</p>
+<p>Good：对于渲染复杂、非结构化或稀疏的几何数据特别有效。
+Bad：存在渲染漏洞或锯齿效应等问题。 3D GS [12] 通过使用各向异性高斯函数扩展了这一概念，以实现更连续、更有凝聚力的场景表示。</p>
+<h1 id="3d-gaussian-splatting-principles"><a class="header" href="#3d-gaussian-splatting-principles">3D GAUSSIAN SPLATTING: PRINCIPLES</a></h1>
+<h2 id="使用学习的-3d-高斯函数进行新颖视图合成"><a class="header" href="#使用学习的-3d-高斯函数进行新颖视图合成">使用学习的 3D 高斯函数进行新颖视图合成</a></h2>
+<p>3D GS 如何在给定结构良好的 3D 高斯的情况下合成图像，即3D GS的前向过程。</p>
+<p>$$
+L = \sum_i G(x,y,z,\mu_i, \Sigma_i)\cdot c_i(θ, φ)
+$$</p>
+<h3 id="输入"><a class="header" href="#输入">输入</a></h3>
+<p>一组高斯球，每个高斯球包含以下信息：</p>
+<ul>
+<li>位置：\(\mu\)</li>
+<li>不透明度： \(\alpha\)</li>
+<li>协方差：\(\Sigma\)</li>
+<li>颜色：c</li>
+</ul>
+<p>一个高斯球是 3D GS 中场景表示的最小元素。</p>
+<p>所有属性都可以通过反向传播来学习和优化。现在假设这些高斯球都已经优化好了。</p>
+<p><img src="./assets/7b6ce0e0b104d36e8331f86fd4c9ab5a_3_Figure_3_-1437298192.png" alt="" /></p>
+<h3 id="splatting"><a class="header" href="#splatting">Splatting</a></h3>
+<p>首先将这些 3D 高斯投影到基于像素的图像平面上，这一过程称为“splatting”。</p>
+<p><img src="./assets/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202024-05-05%2022.42.06.png" alt="" /></p>
+<p><a href="https://caterpillarstudygroup.github.io/GAMES101_mdbook/MVP/PerspectiveProjection.html">Frustum</a></p>
+<p>相机pose确定以后，根据frustum切出能看见的高斯球。计算出相机视角下的高斯球的协方差。</p>
+<h3 id="可微分渲染-by-pixels"><a class="header" href="#可微分渲染-by-pixels">可微分渲染 by pixels</a></h3>
+<blockquote>
+<p>此处先只介绍基本过程，不讲加速算法</p>
+</blockquote>
+<p>给定像素 x 的位置，可以通过投影变换 W 来计算其到所有重叠高斯函数的距离，即这些高斯函数的深度，形成高斯函数 N 的排序列表。</p>
+<p>然后，采用alpha合成来计算该像素的最终颜色：</p>
+<p><img src="./assets/7b6ce0e0b104d36e8331f86fd4c9ab5a_3_Figure_4_1136390164.png" alt="" /><br />
+如图所示，NeRF和3D GS的渲染可以看作是彼此的逆过程。</p>
+<h3 id="加速技术"><a class="header" href="#加速技术">加速技术</a></h3>
+<p>像素级计算的成本比较高，因此将精度从像素级转移到块级。</p>
+<p>具体来说，3D GS 先将图像划分为多个不重叠的图块，每个图块包含 16×16 像素。</p>
+<p><img src="./assets/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202024-05-07%2007.35.43.png" alt="" /></p>
+<p>3D GS 进一步确定每个图块被哪些投影高斯覆盖。如果一个投影高斯覆盖多个图块，则需要把高斯复制多份。</p>
+<p><img src="./assets/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202024-05-07%2007.40.28.png" alt="" /></p>
+<h2 id="3d-gs的优化为给定场景获取构造良好的-3d-高斯"><a class="header" href="#3d-gs的优化为给定场景获取构造良好的-3d-高斯">3D GS的优化：为给定场景获取构造良好的 3D 高斯</a></h2>
+<p>3D GS 的优化，旨在构建大量 3D 高斯集合，准确捕捉场景的本质，从而促进自由视点渲染。</p>
+<h3 id="参数优化"><a class="header" href="#参数优化">参数优化</a></h3>
+<h4 id="loss"><a class="header" href="#loss">Loss</a></h4>
+<blockquote>
+<p>由于ray marching成本高昂，NeRF 通常在像素级别而不是图像级别计算损失。</p>
+</blockquote>
+<h1 id="3d-gaussian-splatting-directions"><a class="header" href="#3d-gaussian-splatting-directions">3D GAUSSIAN SPLATTING: DIRECTIONS</a></h1>
+<h1 id="application-areas-and-tasks"><a class="header" href="#application-areas-and-tasks">APPLICATION AREAS AND TASKS</a></h1>
+<h2 id="simultaneous-localization-and-mapping-slam"><a class="header" href="#simultaneous-localization-and-mapping-slam">Simultaneous Localization and Mapping (SLAM)</a></h2>
+<h2 id="dynamic-scene-reconstruction"><a class="header" href="#dynamic-scene-reconstruction">Dynamic Scene Reconstruction</a></h2>
+<table><thead><tr><th>ID</th><th>Year</th><th>Name</th><th>Note</th><th>Tags</th><th>Link</th></tr></thead><tbody>
+<tr><td>36</td><td>2024</td><td>GaussianAvatar: Towards Realistic Human Avatar Modeling from a Single Video via Animatable 3D Gaussians</td><td>输入：单个视频 输出：具有动态 3D 外观的逼真人类头像 目的：实现自由视角渲染，生成逼真人类头像动画</td><td></td><td><a href="https://caterpillarstudygroup.github.io/ReadPapers/36.html">link</a></td></tr>
+</tbody></table>
+<h2 id="ai-generated-content-aigc"><a class="header" href="#ai-generated-content-aigc">AI-Generated Content (AIGC)</a></h2>
+<table><thead><tr><th>ID</th><th>Year</th><th>Name</th><th>Note</th><th>Tags</th><th>Link</th></tr></thead><tbody>
+<tr><td>34</td><td>2024</td><td>Splatter a Video: Video Gaussian Representation for Versatile Processing</td><td>利用高斯进行视频编辑</td><td></td><td></td></tr>
+</tbody></table>
+<h2 id="autonomous-driving"><a class="header" href="#autonomous-driving">Autonomous Driving</a></h2>
+<h2 id="endoscopic-scene-reconstruction"><a class="header" href="#endoscopic-scene-reconstruction">Endoscopic Scene Reconstruction</a></h2>
+<h2 id="medical-image"><a class="header" href="#medical-image">Medical Image</a></h2>
+<h1 id="reference"><a class="header" href="#reference">Reference</a></h1>
+<p>A Survey on 3D Gaussian Splatting</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="HPE_HMR_Summary.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="HumanMotionGenerationSummary.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="HPE_HMR_Summary.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="HumanMotionGenerationSummary.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="theme/pagetoc.js"></script>
+    </body>
+</html>

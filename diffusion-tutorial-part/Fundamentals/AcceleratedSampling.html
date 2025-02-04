@@ -1,0 +1,391 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Accelerated Sampling - ImportantArticles</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The note of Important Articles">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../theme/pagetoc.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../ReadPapers.html"><strong aria-hidden="true">2.</strong> 如何高效读论文</a></li><li class="chapter-item expanded affix "><li class="part-title">CVPR Tutorial - Denoising Diffusion Models: A Generative Learning Big Bang</li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Introduction.html"><strong aria-hidden="true">3.</strong> Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Fundamentals</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Fundamentals/DenoisingDiffusionProbabilisticModels.html"><strong aria-hidden="true">4.1.</strong> Denoising Diffusion Probabilistic Models</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Fundamentals/Score-basedGenerativeModelingwithDifferentialEquations.html"><strong aria-hidden="true">4.2.</strong> Score-based Generative Modeling with Differential Equations</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Fundamentals/AcceleratedSampling.html" class="active"><strong aria-hidden="true">4.3.</strong> Accelerated Sampling</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Fundamentals/ConditionalGenerationandGuidance.html"><strong aria-hidden="true">4.4.</strong> Conditional Generation and Guidance</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Fundamentals/Summary.html"><strong aria-hidden="true">4.5.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Architecture.html"><strong aria-hidden="true">5.</strong> T2I 基模型</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Image Applications Based on 基模型</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationOnImage/ImageEditing.html"><strong aria-hidden="true">6.1.</strong> 图像编辑</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Applicationsonotherdomains/InverseProblems.html"><strong aria-hidden="true">6.2.</strong> 图像去噪/图像超分/图像补全</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationOnImage/LargeContents.html"><strong aria-hidden="true">6.3.</strong> 大图生成</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 3D Applications Based on Diffusion</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationsOn3D/3D.html"><strong aria-hidden="true">7.1.</strong> 3D表示</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationsOn3D/2Ddiffusionmodelsfor3Dgeneration.html"><strong aria-hidden="true">7.2.</strong> 3D生成</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationsOn3D/Diffusionmodelsforviewsynthesis.html"><strong aria-hidden="true">7.3.</strong> 新视角合成</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationsOn3D/3Dreconstruction.html"><strong aria-hidden="true">7.4.</strong> 3D重建</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationsOn3D/Inverseproblems.html"><strong aria-hidden="true">7.5.</strong> 3D编辑</a></li></ol></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationsOn3D/Safetyandlimitationsofdiffusionmodels.html"><strong aria-hidden="true">8.</strong> Safety and limitations of diffusion models</a></li><li class="chapter-item expanded affix "><li class="part-title">Video Diffusion Models</li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/Introduction.html"><strong aria-hidden="true">9.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/VideoGeneration.html"><strong aria-hidden="true">10.</strong> Video Generation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/Pioneeringearlyworks.html"><strong aria-hidden="true">10.1.</strong> 闭源T2V大模型</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/Open-sourcebasemodels.html"><strong aria-hidden="true">10.2.</strong> 开源T2V基模型</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/WorksBasedOnT2I.html"><strong aria-hidden="true">10.3.</strong> Works Based on T2I 基模型</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/WorksBasedOnT2V.html"><strong aria-hidden="true">10.4.</strong> Works Based on T2V 基模型</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/Storyboard.html"><strong aria-hidden="true">10.5.</strong> Storyboard</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/Longvideogeneration.html"><strong aria-hidden="true">10.6.</strong> Long video generation</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/Multimodal-guidedgeneration.html"><strong aria-hidden="true">10.7.</strong> Multimodal-guided generation</a></li></ol></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoEditing.html"><strong aria-hidden="true">11.</strong> Video Editing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoEditing/Tuning-based.html"><strong aria-hidden="true">11.1.</strong> Tuning-based</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoEditing/Training-free.html"><strong aria-hidden="true">11.2.</strong> Training-free</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoEditing/ControlledEdifng.html"><strong aria-hidden="true">11.3.</strong> Controlled Edifng</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoEditing/3D-Aware.html"><strong aria-hidden="true">11.4.</strong> 3D-Aware</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoEditing/OtherGuidance.html"><strong aria-hidden="true">11.5.</strong> Other Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/EvaluationMetrics.html"><strong aria-hidden="true">12.</strong> 评价指标</a></li><li class="chapter-item expanded affix "><li class="part-title">Others</li><li class="chapter-item expanded "><a href="../../LargeMultimodalModelsNotesonCVPR2023Tutorial.html"><strong aria-hidden="true">13.</strong> Large Multimodal Models Notes on CVPR 2023 Tutorial</a></li><li class="chapter-item expanded "><a href="../../HPE_HMR_Summary.html"><strong aria-hidden="true">14.</strong> Deep Learning for 3D Human Pose Estimation and Mesh Recovery: A Survey</a></li><li class="chapter-item expanded "><a href="../../3D_Gaussian_Splatting.html"><strong aria-hidden="true">15.</strong> A Survey on 3D Gaussian Splatting</a></li><li class="chapter-item expanded "><a href="../../HumanMotionGenerationSummary.html"><strong aria-hidden="true">16.</strong> Human Motion Generation: A Survey</a></li><li class="chapter-item expanded "><a href="../../HumanVideoGeneration.html"><strong aria-hidden="true">17.</strong> Human Video Generation</a></li><li class="chapter-item expanded "><a href="../../数据集.html"><strong aria-hidden="true">18.</strong> 数据集</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ImportantArticles</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/CaterpillarStudyGroup/ImportantArticles" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <p>P38</p>
+<h1 id="accelerated-sampling"><a class="header" href="#accelerated-sampling">Accelerated Sampling</a></h1>
+<p>P39</p>
+<h2 id="the-generative-learning-trilemma"><a class="header" href="#the-generative-learning-trilemma">The generative learning trilemma</a></h2>
+<p><img src="../../assets/D1-39.png" alt="" /> </p>
+<blockquote>
+<p>🔎 <u>Tackling the Generative Learning Trilemma with Denoising Diffusion GANs, ICLR 2022</u> </p>
+</blockquote>
+<p>其中Diffusion based生成模型的主要问题是生成速度慢，因此需要在保持高采样质量和多样性的前提下，针对采样速度慢的问题进行加速。</p>
+<p>P41</p>
+<h2 id="acceleration-techniques"><a class="header" href="#acceleration-techniques">Acceleration Techniques</a></h2>
+<ul>
+<li>Advanced ODE/SDE Solvers</li>
+<li>Distillation Techniques</li>
+<li>Low-dim. Diffusion Processes</li>
+<li>Advanced Diffusion Processes</li>
+</ul>
+<p>P42</p>
+<h1 id="advanced-odesde-solvers"><a class="header" href="#advanced-odesde-solvers">Advanced ODE/SDE Solvers</a></h1>
+<blockquote>
+<p>✅ ODE 实现 std normal 分布与真实数据分布之间的映射。</p>
+</blockquote>
+<p>P43</p>
+<h2 id="generative-odes"><a class="header" href="#generative-odes">Generative ODEs</a></h2>
+<p>Solve ODEs with as little function evaluations as possible</p>
+<p>$$
+dx=\epsilon _\theta (x,t)dt
+$$</p>
+<p><img src="../../assets/D1-43.png" alt="" /> </p>
+<ul>
+<li>一阶方法（Euler 方法）：每个时间步简化为线性过程。当 step 较大时，会与 GT 有较大的偏离。</li>
+</ul>
+<p>P44</p>
+<p><img src="../../assets/D1-44.png" alt="" /> </p>
+<ul>
+<li>高阶方法
+P45<br />
+<img src="../../assets/D1-45.png" alt="" /> </li>
+</ul>
+<p>P46</p>
+<h2 id="扩散模型-odesde-求解器的相关工作"><a class="header" href="#扩散模型-odesde-求解器的相关工作">扩散模型 ODE/SDE 求解器的相关工作</a></h2>
+<p><img src="../../assets/08-14.png" alt="" /></p>
+<table><thead><tr><th>ID</th><th>Year</th><th>Name</th><th>Note</th><th>Tags</th><th>Link</th></tr></thead><tbody>
+<tr><td><strong>2</strong></td><td>2021</td><td>Denoising Diffusion Implicit Models (DDIM)</td><td>✅ DDIM：可以直接从 \(t_2\) 去噪到 \(t_1\). <br> ✅ 把 \(x_t\) 去掉一个 nolse 之后，不是 sample 另一个noise，而是把原来的 noise 乘以一个系数再加回去。</td><td></td><td><a href="https://caterpillarstudygroup.github.io/ReadPapers/2.html">link</a></td></tr>
+<tr><td></td><td>2021</td><td>Score-Based Generative Modeling through Stochastic Differential Equations</td><td>Runge-Kutta adaptive step-size ODE solver</td><td></td><td></td></tr>
+<tr><td></td><td>2021</td><td>Gotta Go Fast When Generating Data with Score-Based Models</td><td>Higher-Order adaptive step-size SDE solver</td><td></td><td></td></tr>
+<tr><td></td><td>2021</td><td>Denoising Diffusion Implicit Models</td><td>Reparametrized, smoother ODE</td><td></td><td></td></tr>
+<tr><td></td><td>2022</td><td>gDDIM: Generalized denoising diffusion implicit models</td><td>Reparametrized, smoother ODE</td><td></td><td></td></tr>
+<tr><td></td><td>2022</td><td>Pseudo Numerical Methods for Diffusion Models on Manifolds</td><td>Higher-Order ODE solver with linear multistepping</td><td></td><td></td></tr>
+<tr><td></td><td>2022</td><td>Fast Sampling of Diffusion Models with Exponential Integrator</td><td>Exponential ODE Integrators</td><td></td><td></td></tr>
+<tr><td></td><td>2022</td><td>DPM-Solver: A Fast ODE Solver for Diffusion Probabilistic Model Sampling in Around 10 Steps</td><td>Exponential ODE Integrators</td><td></td><td></td></tr>
+<tr><td></td><td>2022</td><td>DPM-Solver++: Fast Solver for Guided Sampling of Diffusion Probabilistic Models</td><td>Exponential ODE Integrators</td><td></td><td></td></tr>
+<tr><td></td><td>2022</td><td>Elucidating the Design Space of Diffusion-Based Generative Models</td><td>Higher-Order ODE solver with Heun’s Method</td><td></td><td></td></tr>
+<tr><td></td><td>2023</td><td>UniPC: A Unified Predictor-Corrector Framework for Fast Sampling of Diffusion Models</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>2023</td><td>Parallel Sampling of Diffusion Model</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>2023</td><td>A Geometric Perspective on Diffusion Models</td><td></td><td></td><td></td></tr>
+</tbody></table>
+<blockquote>
+<p>✅ 这些solvers可以以plug-in的方式使用，且通常能比DDPM更快收敛。</p>
+</blockquote>
+<h1 id="distillation-techniques"><a class="header" href="#distillation-techniques">Distillation Techniques</a></h1>
+<p>P48</p>
+<h2 id="ode-distillation"><a class="header" href="#ode-distillation">ODE Distillation</a></h2>
+<p><img src="../../assets/D1-48.png" alt="" /> </p>
+<p>Can we train a neural network to directly predict \(\mathbf{x} _{{t}'} \) given \(\mathbf{x} _t\)?</p>
+<blockquote>
+<p>✅ \(\mathbf{x} _{{t}'} \)与\(\mathbf{x} _t\)的关系是确定的。</p>
+</blockquote>
+<p>P49</p>
+<table><thead><tr><th>ID</th><th>Year</th><th>Name</th><th>Note</th><th>Tags</th><th>Link</th></tr></thead><tbody>
+<tr><td></td><td>2022</td><td><strong>Progressive distillation</strong> for fast sampling of diffusion models</td><td>蒸馏</td><td></td><td><a href="https://caterpillarstudygroup.github.io/ReadPapers/1.html">link</a></td></tr>
+<tr><td></td><td>2023</td><td>On Distillation of Guided Diffusion Models</td><td><strong>Award Candidate</strong></td><td></td><td><a href="https://caterpillarstudygroup.github.io/ReadPapers/3.html">link</a></td></tr>
+<tr><td></td><td>2023</td><td><strong>Consistency Models</strong></td><td></td><td></td><td><a href="https://caterpillarstudygroup.github.io/ReadPapers/7.html">link</a></td></tr>
+</tbody></table>
+<p>P52</p>
+<h2 id="sde-distillation"><a class="header" href="#sde-distillation">SDE Distillation</a></h2>
+<p><img src="../../assets/D1-52.png" alt="" /> </p>
+<p>Can we train a neural network to directly predict <strong>distribution of</strong> \(\mathbf{x} _ {{t}'} \) given \(\mathbf{x} _ t \) ?</p>
+<blockquote>
+<p>✅ \(\mathbf{x} _ t\) 与 \( \mathbf{x} _ {{t}' }\) 没有必然的联系，得到的是 \( \mathbf{x} _ {{t}' }\) 的分布。</p>
+</blockquote>
+<p>但Normal assumption in denoising distribution holds only for small step</p>
+<blockquote>
+<p>✅ 从 \(t\) 与 \({t}'\) 的差距过大时，normal 分布不足以表达 \(q(\mathbf{x} _ {{t}'}｜\mathbf{x} _ t)\).</p>
+</blockquote>
+<p><img src="../../assets/D1-53.png" alt="" /> </p>
+<p>因此<strong>Requires more complicated functional approximators!</strong>，例如GAN或energy-based。</p>
+<table><thead><tr><th>ID</th><th>Year</th><th>Name</th><th>Note</th><th>Tags</th><th>Link</th></tr></thead><tbody>
+<tr><td></td><td>2022</td><td>Tackling the Generative Learning Trilemma with Denoising Diffusion GANs</td><td>GAN</td><td></td><td><a href="https://caterpillarstudygroup.github.io/ReadPapers/10.html">link</a></td></tr>
+<tr><td></td><td>2021</td><td>Learning energy-based models by diffusion recovery likelihood</td><td>Energy-based models</td><td></td><td></td></tr>
+</tbody></table>
+<p>P54</p>
+<h2 id="training-based-sampling-techniques"><a class="header" href="#training-based-sampling-techniques">Training-based Sampling Techniques</a></h2>
+<table><thead><tr><th>ID</th><th>Year</th><th>Name</th><th>Note</th><th>Tags</th><th>Link</th></tr></thead><tbody>
+<tr><td></td><td>2021</td><td>Knowledge Distillation in Iterative Generative Models for Improved Sampling Speed</td><td>Knowledge distillation</td><td></td><td></td></tr>
+<tr><td></td><td>2022</td><td>Learning Fast Samplers for Diffusion Models by Differentiating Through Sample Quality</td><td>Learned Samplers</td><td></td><td></td></tr>
+<tr><td></td><td>2023</td><td>Fast Sampling of Diffusion Models via Operator Learning</td><td>Neural Operators</td><td></td><td></td></tr>
+<tr><td></td><td>2023</td><td>Wavelet Diffusion Models Are Fast and Scalable Image Generators</td><td>Wavelet Diffusion Models</td><td></td><td></td></tr>
+<tr><td></td><td>2022</td><td>GENIE: Higher-Order Denoising Diffusion Solvers</td><td>Distilled ODE Solvers</td><td></td><td></td></tr>
+</tbody></table>
+<p>P56</p>
+<h1 id="low-dim-diffusion-process"><a class="header" href="#low-dim-diffusion-process">Low-dim Diffusion Process</a></h1>
+<h2 id="cascaded-generation"><a class="header" href="#cascaded-generation">Cascaded Generation</a></h2>
+<p><img src="../../assets/D1-56.png" alt="" /> </p>
+<p>Cascaded Diffusion Models outperform Big-GAN in FID and IS and VQ-VAE2 in Classification Accuracy Score.</p>
+<table><thead><tr><th>ID</th><th>Year</th><th>Name</th><th>Note</th><th>Tags</th><th>Link</th></tr></thead><tbody>
+<tr><td></td><td>2021</td><td>Cascaded Diffusion Models for High Fidelity Image Generation</td><td></td><td></td><td><a href="https://caterpillarstudygroup.github.io/ReadPapers/3.html">link</a></td></tr>
+<tr><td></td><td>2022</td><td>Hierarchical Text-Conditional Image Generation with CLIP Latents</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>2022</td><td>Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding</td><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>P57</p>
+<h2 id="latent-diffusion-models"><a class="header" href="#latent-diffusion-models">Latent Diffusion Models</a></h2>
+<p><img src="../../assets/08-21.png" alt="" /> </p>
+<h3 id="main-idea"><a class="header" href="#main-idea">Main Idea：</a></h3>
+<p><strong>Variational autoencoder + score-based prior</strong></p>
+<p>Encoder maps the input data to an embedding space<br />
+Denoising diffusion models are applied in the latent space</p>
+<p>P58</p>
+<h3 id="advantages"><a class="header" href="#advantages">Advantages:</a></h3>
+<p>(1) The distribution of latent embeddings close to Normal distribution \(\to \) <em><strong>Simpler denoising, Faster synthesis</strong></em>!<br />
+(2) Latent space \(\to \) <em><strong>More expressivity and flexibility in design!</strong></em><br />
+(3) Tailored Autoencoders \(\to \) <em><strong>More expressivity, Application to any data type (graphs, text, 3D data, etc.)!</strong></em></p>
+<table><thead><tr><th>ID</th><th>Year</th><th>Name</th><th>Note</th><th>Tags</th><th>Link</th></tr></thead><tbody>
+<tr><td></td><td>2021</td><td>Score-based generative modeling in latent space</td><td><strong>End-to-End</strong> Training objective<br><img src="../../assets/D1-59.png" alt="" /> <br> ✅ 这篇文章对 VAE 和 diffusion 一起进行训练，文章的创新点是，利用 score matching 中的信息来计算 cross entropy.</td><td></td><td></td></tr>
+<tr><td>45</td><td>2022</td><td>High-Resolution Image Synthesis with Latent Diffusion Models</td><td><strong>Two-stage</strong> Training，先训E&amp;D，再训diffusion。每次需要训练的网络都不大。</td><td></td><td><a href="https://caterpillarstudygroup.github.io/ReadPapers/45.html">link</a></td></tr>
+<tr><td></td><td>2021</td><td>D2C: Diffusion-Denoising Models for Few-shot Conditional Generation</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>2022</td><td>Score-Guided Intermediate Layer Optimization: Fast Langevin Mixing for Inverse Problems</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>2022</td><td>Dimensionality-Varying Diffusion Process</td><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>The efficiency and expressivity of latent diffusion models + open-source access fueled a large body of work in the community</p>
+<h1 id="advanced-diffusion-models"><a class="header" href="#advanced-diffusion-models">Advanced Diffusion Models</a></h1>
+<blockquote>
+<p>✅ 这一部分没有讲</p>
+</blockquote>
+<p>P63</p>
+<h2 id="ode-interpretation"><a class="header" href="#ode-interpretation">ODE interpretation</a></h2>
+<p>把ODE看作是Deterministic generative process</p>
+<p><img src="../../assets/D1-63.png" alt="" /> </p>
+<ul>
+<li>DDIM sampler can be considered as an integration rule of the following ODE:</li>
+</ul>
+<p>$$
+d\mathbf{\bar{x} } (t)=\epsilon ^{(t)} _ \theta(\frac{\mathbf{\bar{x} } (t)}{\sqrt{\eta ^2+1}} )d\eta (t); \mathbf{\bar{x} } =\mathbf{x} / \sqrt{\bar{a} },\eta = \sqrt{1-\bar{a}} / \sqrt{\bar{a } }
+$$</p>
+<ul>
+<li>
+<p>Karras et al. argue that the ODE of DDIM is favored, as the tangent of the solution trajectory always points 
+towards the denoiser output.</p>
+</li>
+<li>
+<p>This leads to largely linear solution trajectories with low curvature à Low curvature means less truncation 
+errors accumulated over the trajectories. </p>
+</li>
+</ul>
+<blockquote>
+<p>🔎 <u>Song et al., “Denoising Diffusion Implicit Models”, ICLR 2021.</u><br />
+🔎 <u>Karras et al., “Elucidating the Design Space of Diffusion-Based Generative Models”, arXiv 2022.</u></p>
+</blockquote>
+<table><thead><tr><th>ID</th><th>Year</th><th>Name</th><th>Note</th><th>Tags</th><th>Link</th></tr></thead><tbody>
+<tr><td></td><td>2022</td><td><strong>Progressive distillation</strong> for fast sampling of diffusion models</td><td>通过修改参数化方式来提升“减少sampling steps”的稳定性。</td><td></td><td><a href="https://caterpillarstudygroup.github.io/ReadPapers/1.html">link</a></td></tr>
+</tbody></table>
+<p>P64</p>
+<h2 id="momentum-based-diffusion"><a class="header" href="#momentum-based-diffusion">“Momentum-based” diffusion</a></h2>
+<h5 id="introduce-a-velocity-variable-and-run-diffusion-in-extended-space"><a class="header" href="#introduce-a-velocity-variable-and-run-diffusion-in-extended-space">Introduce a velocity variable and run diffusion in extended space</a></h5>
+<p><img src="../../assets/D1-64.png" alt="" /> </p>
+<p><u>Dockhorn et al., “Score-Based Generative Modeling with Critically-Damped Langevin Diffusion”, ICLR 2022.</u></p>
+<p>P65</p>
+<h2 id="additional-reading"><a class="header" href="#additional-reading">Additional Reading</a></h2>
+<ul>
+<li>Schrödinger Bridge:</li>
+</ul>
+<blockquote>
+<p>🔎 Bortoli et al., <u>&quot;Diffusion Schrödinger Bridge&quot;,</u> NeurIPS 2021<br />
+🔎 Chen et al., <u>“Likelihood Training of Schrödinger Bridge using Forward-Backward SDEs Theory”, </u>ICLR 2022</p>
+</blockquote>
+<ul>
+<li>Diffusion Processes on Manifolds:</li>
+</ul>
+<blockquote>
+<p>🔎 Bortoli et al., <u>&quot;Riemannian Score-Based Generative Modelling&quot;, </u>NeurIPS 2022</p>
+</blockquote>
+<ul>
+<li>Cold Diffusion:</li>
+</ul>
+<blockquote>
+<p>🔎 Bansal et al., <u>&quot;Cold Diffusion: Inverting Arbitrary Image Transforms Without Noise&quot;, </u>arXiv 2022</p>
+</blockquote>
+<ul>
+<li>Diffusion for Corrupted Data:</li>
+</ul>
+<blockquote>
+<p>🔎 Daras et al., <u>&quot;Soft Diffusion: Score Matching for General Corruptions&quot;, </u>TMLR 2023<br />
+🔎 Delbracio and Milanfar, <u>&quot;Inversion by Direct Iteration: An Alternative to Denoising Diffusion for Image Restoration&quot;, </u>arXiv 2023<br />
+🔎 Luo et al., <u>&quot;Image Restoration with Mean-Reverting Stochastic Differential Equations&quot;, </u>ICML 2023<br />
+🔎 Liu et al., <u>“I2SB: Image-to-Image Schrödinger Bridge”, </u>ICML 2023</p>
+</blockquote>
+<ul>
+<li>Blurring Diffusion Process:</li>
+</ul>
+<blockquote>
+<p>🔎 Hoogeboom and Salimans, <u>&quot;Blurring Diffusion Models&quot;, </u>ICLR 2023<br />
+🔎 Rissanen et al, <u>“Generative Modelling With Inverse Heat Dissipation”, </u>ICLR 2023</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>本文出自CaterpillarStudyGroup，转载请注明出处。</p>
+<p>https://caterpillarstudygroup.github.io/ImportantArticles/</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../diffusion-tutorial-part/Fundamentals/Score-basedGenerativeModelingwithDifferentialEquations.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../diffusion-tutorial-part/Fundamentals/ConditionalGenerationandGuidance.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../diffusion-tutorial-part/Fundamentals/Score-basedGenerativeModelingwithDifferentialEquations.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../diffusion-tutorial-part/Fundamentals/ConditionalGenerationandGuidance.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../theme/pagetoc.js"></script>
+    </body>
+</html>

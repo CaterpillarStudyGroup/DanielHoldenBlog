@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>3D-Aware - ImportantArticles</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The note of Important Articles">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../theme/pagetoc.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../ReadPapers.html"><strong aria-hidden="true">2.</strong> 如何高效读论文</a></li><li class="chapter-item expanded affix "><li class="part-title">CVPR Tutorial - Denoising Diffusion Models: A Generative Learning Big Bang</li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Introduction.html"><strong aria-hidden="true">3.</strong> Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Fundamentals</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Fundamentals/DenoisingDiffusionProbabilisticModels.html"><strong aria-hidden="true">4.1.</strong> Denoising Diffusion Probabilistic Models</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Fundamentals/Score-basedGenerativeModelingwithDifferentialEquations.html"><strong aria-hidden="true">4.2.</strong> Score-based Generative Modeling with Differential Equations</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Fundamentals/AcceleratedSampling.html"><strong aria-hidden="true">4.3.</strong> Accelerated Sampling</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Fundamentals/ConditionalGenerationandGuidance.html"><strong aria-hidden="true">4.4.</strong> Conditional Generation and Guidance</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Fundamentals/Summary.html"><strong aria-hidden="true">4.5.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Architecture.html"><strong aria-hidden="true">5.</strong> T2I 基模型</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Image Applications Based on 基模型</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationOnImage/ImageEditing.html"><strong aria-hidden="true">6.1.</strong> 图像编辑</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/Applicationsonotherdomains/InverseProblems.html"><strong aria-hidden="true">6.2.</strong> 图像去噪/图像超分/图像补全</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationOnImage/LargeContents.html"><strong aria-hidden="true">6.3.</strong> 大图生成</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 3D Applications Based on Diffusion</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationsOn3D/3D.html"><strong aria-hidden="true">7.1.</strong> 3D表示</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationsOn3D/2Ddiffusionmodelsfor3Dgeneration.html"><strong aria-hidden="true">7.2.</strong> 3D生成</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationsOn3D/Diffusionmodelsforviewsynthesis.html"><strong aria-hidden="true">7.3.</strong> 新视角合成</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationsOn3D/3Dreconstruction.html"><strong aria-hidden="true">7.4.</strong> 3D重建</a></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationsOn3D/Inverseproblems.html"><strong aria-hidden="true">7.5.</strong> 3D编辑</a></li></ol></li><li class="chapter-item expanded "><a href="../../diffusion-tutorial-part/ApplicationsOn3D/Safetyandlimitationsofdiffusionmodels.html"><strong aria-hidden="true">8.</strong> Safety and limitations of diffusion models</a></li><li class="chapter-item expanded affix "><li class="part-title">Video Diffusion Models</li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/Introduction.html"><strong aria-hidden="true">9.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/VideoGeneration.html"><strong aria-hidden="true">10.</strong> Video Generation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/Pioneeringearlyworks.html"><strong aria-hidden="true">10.1.</strong> 闭源T2V大模型</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/Open-sourcebasemodels.html"><strong aria-hidden="true">10.2.</strong> 开源T2V基模型</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/WorksBasedOnT2I.html"><strong aria-hidden="true">10.3.</strong> Works Based on T2I 基模型</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/WorksBasedOnT2V.html"><strong aria-hidden="true">10.4.</strong> Works Based on T2V 基模型</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/Storyboard.html"><strong aria-hidden="true">10.5.</strong> Storyboard</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/Longvideogeneration.html"><strong aria-hidden="true">10.6.</strong> Long video generation</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoGeneration/Multimodal-guidedgeneration.html"><strong aria-hidden="true">10.7.</strong> Multimodal-guided generation</a></li></ol></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoEditing.html"><strong aria-hidden="true">11.</strong> Video Editing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoEditing/Tuning-based.html"><strong aria-hidden="true">11.1.</strong> Tuning-based</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoEditing/Training-free.html"><strong aria-hidden="true">11.2.</strong> Training-free</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoEditing/ControlledEdifng.html"><strong aria-hidden="true">11.3.</strong> Controlled Edifng</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoEditing/3D-Aware.html" class="active"><strong aria-hidden="true">11.4.</strong> 3D-Aware</a></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/VideoEditing/OtherGuidance.html"><strong aria-hidden="true">11.5.</strong> Other Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="../../VideoDiffusionModels/EvaluationMetrics.html"><strong aria-hidden="true">12.</strong> 评价指标</a></li><li class="chapter-item expanded affix "><li class="part-title">Others</li><li class="chapter-item expanded "><a href="../../LargeMultimodalModelsNotesonCVPR2023Tutorial.html"><strong aria-hidden="true">13.</strong> Large Multimodal Models Notes on CVPR 2023 Tutorial</a></li><li class="chapter-item expanded "><a href="../../HPE_HMR_Summary.html"><strong aria-hidden="true">14.</strong> Deep Learning for 3D Human Pose Estimation and Mesh Recovery: A Survey</a></li><li class="chapter-item expanded "><a href="../../3D_Gaussian_Splatting.html"><strong aria-hidden="true">15.</strong> A Survey on 3D Gaussian Splatting</a></li><li class="chapter-item expanded "><a href="../../HumanMotionGenerationSummary.html"><strong aria-hidden="true">16.</strong> Human Motion Generation: A Survey</a></li><li class="chapter-item expanded "><a href="../../HumanVideoGeneration.html"><strong aria-hidden="true">17.</strong> Human Video Generation</a></li><li class="chapter-item expanded "><a href="../../数据集.html"><strong aria-hidden="true">18.</strong> 数据集</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ImportantArticles</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/CaterpillarStudyGroup/ImportantArticles" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <p>P242</p>
+<h1 id="3-video-editing"><a class="header" href="#3-video-editing">3 Video Editing</a></h1>
+<h2 id="34-3d-aware"><a class="header" href="#34-3d-aware">3.4 3D-Aware</a></h2>
+<p>P243</p>
+<p><img src="../../assets/08-243.png" alt="" /> </p>
+<p>P244</p>
+<h2 id="layered-neural-atlases"><a class="header" href="#layered-neural-atlases">Layered Neural Atlases</a></h2>
+<p>Decompose a video into two images</p>
+<ul>
+<li>Decompose a video into a foreground image + a background image</li>
+</ul>
+<p><img src="../../assets/08-244.png" alt="" /> </p>
+<p>Kasten et al., “Layered Neural Atlases for Consistent Video Editing,” arXiv 2023.</p>
+<blockquote>
+<p>✅ 对背景进行编辑（图片编辑、风格迁移）再传播到不同帧上去。</p>
+</blockquote>
+<p>P245</p>
+<h2 id="layered-neural-atlases-1"><a class="header" href="#layered-neural-atlases-1">Layered Neural Atlases</a></h2>
+<p>Decompose a video into two images</p>
+<ul>
+<li>Decompose a video into a foreground image + a background image</li>
+<li>Edit the foreground/background image = edit the video</li>
+</ul>
+<p><img src="../../assets/08-245.png" alt="" /> </p>
+<p>Kasten et al., “Layered Neural Atlases for Consistent Video Editing,” arXiv 2023.</p>
+<p>P246</p>
+<h2 id="videdit"><a class="header" href="#videdit">VidEdit</a></h2>
+<p>Atlas-based video editing</p>
+<ul>
+<li>Decompose a video into a foreground image + a background image</li>
+<li>Edit the foreground/background image = edit the video</li>
+<li>Use diffusion to edit foreground/background atlas</li>
+</ul>
+<p><img src="../../assets/08-246.png" alt="" /> </p>
+<p>Video from Kasten et al., “Layered Neural Atlases for Consistent Video Edigng,” arXiv 2023.<br />
+Couairon et al., “VidEdit: Zero-Shot and Spagally Aware Text-Driven Video Edigng,” arXiv 2023.</p>
+<blockquote>
+<p>✅ 前景编辑：(1) 抠出第一帧前景并进行编辑得到 Partial Atlas.<br />
+✅ (2) Partial Atlas 作为下一帧的 condition 整体上是自回归的。<br />
+✅ 所有 Partial 合起来得到一个整体。<br />
+✅ 背景使用深度信息作为 cordition.</p>
+</blockquote>
+<p>P247</p>
+<h2 id="stablevideo--shape-aware-text-drive-layered-video-editing"><a class="header" href="#stablevideo--shape-aware-text-drive-layered-video-editing">StableVideo &amp; Shape-aware Text-drive Layered Video Editing</a></h2>
+<p>Atlas-based video edieng</p>
+<p><img src="../../assets/08-247.png" alt="" /> </p>
+<p>Lee et al., “Shape-aware Text-driven Layered Video Editing,” CVPR 2023.<br />
+Chai et al., “StableVideo: Text-driven Consistency-aware Diffusion Video Editing,” ICCV 2023.</p>
+<p>P248</p>
+<h2 id="stablevideo"><a class="header" href="#stablevideo">StableVideo</a></h2>
+<p>Atlas-based video editing</p>
+<p><img src="../../assets/08-248.png" alt="" /> </p>
+<p>Chai et al., “StableVideo: Text-driven Consistency-aware Diffusion Video Edigng,” ICCV 2023.</p>
+<blockquote>
+<p>✅ 给一个场景的多视角图片，基于 MLP 学习 3D 场景的隐式表达。</p>
+</blockquote>
+<p>P249</p>
+<h2 id="content-deformation-field-codef"><a class="header" href="#content-deformation-field-codef">Content Deformation Field (CoDeF)</a></h2>
+<p>Edit a video = edit a canonical image + learned deformaeon field</p>
+<ul>
+<li>
+<p>Limitations of Neural Layered Atlases</p>
+<ul>
+<li>Limited capacity for faithfully reconstructing intricate video details, missing subtle motion features like blinking eyes and slight smiles</li>
+<li>Distorted nature of the estimated atlas leads to impaired semantic information</li>
+</ul>
+</li>
+<li>
+<p>Content Deformation Field: inspired by dynamic NeRF works, a new way of representing video, as a 2d canonical image + 3D deformation field over time</p>
+</li>
+<li>
+<p>Edit a video = edit a canonical image + learned deformation field</p>
+</li>
+</ul>
+<p>Ouyang et al., “CoDeF: Content Deformation Fields for Temporally Consistent Video Processing,” arXiv 2023.</p>
+<p>P250</p>
+<h2 id="content-deformation-field-codef-1"><a class="header" href="#content-deformation-field-codef-1">Content Deformation Field (CoDeF)</a></h2>
+<p>Edit a video = edit a canonical image + learned deformation field</p>
+<p><strong>Problem Formulation</strong></p>
+<ul>
+<li>Decode a video into a 2D canonical field and a 3D temporal deformation field</li>
+<li>Deformation Field: video (x, y, t) → canonical image coordinate (x’, y’)</li>
+<li>Canonical Field: (x’, y’) → (r, g, b), like a “2D image”</li>
+</ul>
+<p><img src="../../assets/08-250.png" alt="" /> </p>
+<p>Ouyang et al., “CoDeF: Content Deformation Fields for Temporally Consistent Video Processing,” arXiv 2023.</p>
+<p>P251</p>
+<h2 id="content-deformation-field-codef-2"><a class="header" href="#content-deformation-field-codef-2">Content Deformation Field (CoDeF)</a></h2>
+<p>Edit a video = edit a canonical image + learned deformation field</p>
+<p><strong>CoDeF compared to Atlas</strong></p>
+<ul>
+<li>Superior robustness to non-rigid motion</li>
+<li>Effective reconstruction of subtle movements (e.g. eyes blinking)</li>
+<li>More accurate reconstruction: 4.4dB higher PSNR</li>
+</ul>
+<p>Ouyang et al., “CoDeF: Content Deformation Fields for emporally Consistent Video Processing,” arXiv 2023.</p>
+<blockquote>
+<p>✅ CoDef 把 3D 视频压缩为 2D Image，因此可以利用很多 2D 算法，再把 deformation 传递到整个视频。</p>
+</blockquote>
+<p>P252</p>
+<h2 id="content-deformation-field-codef-3"><a class="header" href="#content-deformation-field-codef-3">Content Deformation Field (CoDeF)</a></h2>
+<p>Edit a video = edit a canonical image + learned deformation field</p>
+<p><img src="../../assets/08-252.png" alt="" /> </p>
+<p>Ouyang et al., “CoDeF: Content Deformation Fields for emporally Consistent Video Processing,” arXiv 2023.</p>
+<blockquote>
+<p>✅ 在时序上有比较好的一致性。<br />
+✅ 由于使用了 control net，与原视频在 Spatial level 也保持得非常好。</p>
+</blockquote>
+<p>P253</p>
+<h2 id="content-deformafon-field-codef"><a class="header" href="#content-deformafon-field-codef">Content Deformafon Field (CoDeF)</a></h2>
+<p>Edit a video = edit a canonical image + learned deformation field</p>
+<p><img src="../../assets/08-253.png" alt="" /> </p>
+<p>Ouyang et al., “CoDeF: Content Deformation Fields for emporally Consistent Video Processing,” arXiv 2023.</p>
+<p>P254</p>
+<h2 id="dynvideo-e"><a class="header" href="#dynvideo-e">DynVideo-E</a></h2>
+<p>Edit a video = edit a canonical <del>image</del> 3D NeRF</p>
+<p>Canonical image in CoDeF is still 2D</p>
+<p>Can we represent the video in a truly 3D space?</p>
+<p>Liu et al., “DynVideo-E: Harnessing Dynamic NeRF for Large-Scale Motion- and View-Change Human-Centric Video Editing,” arXiv 2023.</p>
+<p>P255</p>
+<h2 id="dynvideo-e-1"><a class="header" href="#dynvideo-e-1">DynVideo-E</a></h2>
+<p>Edit a video = edit a canonical <del>image</del> 3D NeRF</p>
+<p><img src="../../assets/08-255.png" alt="" /> </p>
+<p>Liu et al., “DynVideo-E: Harnessing Dynamic NeRF for arge-Scale Motion- and View-Change Human-Centric Video Editing,” arXiv 2023.</p>
+<blockquote>
+<p>✅ 利用现有成熟技术，把 3D 场景用 Nerf 表示出来编辑也是在 3D 上进行。</p>
+</blockquote>
+<p>P256</p>
+<blockquote>
+<p>✅ Nerf 在人体成像上比较好。<br />
+✅ Dynamic NeRF 本身也是比较难的。</p>
+</blockquote>
+<p>P257</p>
+<h2 id="dynvideo-e-2"><a class="header" href="#dynvideo-e-2">DynVideo-E</a></h2>
+<p>Edit a video = edit a canonical <del>image</del> 3D NeRF</p>
+<p><strong>Main idea</strong></p>
+<ul>
+<li>For the first time introduce the dynamic NeRF as an innovative video representation for large-scale motion- and view-change human-centric video editing.</li>
+</ul>
+<p>Liu et al., “DynVideo-E: Harnessing Dynamic NeRF for Large-Scale Motion- and View-Change Human-Centric Video Editing,” arXiv 2023.</p>
+<blockquote>
+<p>✅ 不直接编辑图像，而是编辑 Nerf．<br />
+✅（1）认为背景静止，学出背景 Neof．<br />
+✅ Stale Diffusion 用来计算 Loss.</p>
+</blockquote>
+<p>P258</p>
+<h2 id="dynvideo-e-3"><a class="header" href="#dynvideo-e-3">DynVideo-E</a></h2>
+<p>Edit a video = edit a canonical <del>image</del> 3D NeRF</p>
+<p>Follow HOSNeRF, represent the video as:</p>
+<ul>
+<li>Background NeRF</li>
+<li>Human NeRF</li>
+<li>Deformation Field</li>
+</ul>
+<p>Edit background NeRF and human NeRF respectively</p>
+<p><img src="../../assets/08-258.png" alt="" /> </p>
+<p>Liu et al., “HOSNeRF: Dynamic Human-Object-Scene Neural Radiance Fields from a Single Video,” ICCV 2023.<br />
+Liu et al., “DynVideo-E: Harnessing Dynamic NeRF for Large-Scale Mogon- and View-Change Human-Centric Video Edigng,” arXiv 2023.</p>
+<p>P259</p>
+<h2 id="dynvideo-e-4"><a class="header" href="#dynvideo-e-4">DynVideo-E</a></h2>
+<p>DynVideo-E significantly outperforms SOTA approaches on two challenging datasets by a large margin of 50% ∼ 95% in terms of human preference</p>
+<hr />
+<blockquote>
+<p>本文出自CaterpillarStudyGroup，转载请注明出处。</p>
+<p>https://caterpillarstudygroup.github.io/ImportantArticles/</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../VideoDiffusionModels/VideoEditing/ControlledEdifng.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../VideoDiffusionModels/VideoEditing/OtherGuidance.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../VideoDiffusionModels/VideoEditing/ControlledEdifng.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../VideoDiffusionModels/VideoEditing/OtherGuidance.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../theme/pagetoc.js"></script>
+    </body>
+</html>
